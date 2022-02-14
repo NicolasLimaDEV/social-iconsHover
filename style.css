@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body, html{
+    overflow-x: hidden;
+}
+
+.section-white{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+ul{
+    display: flex;
+}
+
+ul li{
+    margin: 0 40px;
+}
+
+ul li a i{
+    font-size: 60px;
+    padding: 10px;
+    color: #000;
+    transition: .5;
+}
+
+
+ul li a{
+    position: relative;
+    display: block;
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(0,0);
+    box-shadow: 0 0 22px #fff;
+    transition: .5s;
+}
+
+ul li a:hover{
+    transform: perspective(1000px) rotate(-30deg) skew(25deg) translate(20px,-20px);
+    transition: .5s;
+}
+
+/* Color Icons */
+.fa-facebook-square:hover{
+    color: #1877F2;
+    box-shadow: 0 0 22px #1877F2;
+}
+
+.fa-instagram:hover{
+    color: #B81C5F;
+    box-shadow: 0 0 22px #B81C5F;
+}
+
+.fa-youtube:hover{
+    color: red;
+    box-shadow: 0 0 22px red;
+}
+
+.fa-linkedin:hover{
+    color: #0961B8;
+    box-shadow: 0 0 22px #0961B8;
+}
+
+.fa-twitter:hover{
+    color: #00A2E4;
+    box-shadow: 0 0 22px #00A2E4;
+}
+
+.fa-whatsapp:hover{
+    color: #25C862;
+    box-shadow: 0 0 22px #25C862;
+}
+
+.fa-github:hover{
+    color: #000;
+    box-shadow: 0 0 22px #000;
+}
+
+/*** Dark Mode ***/
+.section-dark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #141414;
+    color: #fff;
+}
+
+.section-dark ul li a i{
+    color: #fff;
+}
+
+.section-dark ul li a{
+    box-shadow: 0 0 22px #000;
+}
+
+.section-dark .fa-github:hover{
+    color: #fff;
+    box-shadow: 0 0 22px #fff;
+}
+
+@media (max-width: 850px){
+    .section-white ul, .section-dark ul {
+        flex-direction: column;
+    }
+
+    .section-white li a i, .section-dark li a i{
+        margin: 22px auto;
+    }
+}
